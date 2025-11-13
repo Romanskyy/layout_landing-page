@@ -19,10 +19,15 @@
     gap: 24px;
   }
 
-  &__logo {
+  &__logo-link {
     display: flex;
+  }
+
+  &__logo {
     width: 125px;
     height: 16px;
+
+    @include mixins.hover(transform, scale(1.2));
 
     @include mixins.on-tablet {
       width: 172px;
