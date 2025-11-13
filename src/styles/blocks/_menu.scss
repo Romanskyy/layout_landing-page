@@ -1,3 +1,6 @@
+@use '../utils/mixins' as mixins;
+@use '../utils/variables' as vars;
+
 /* #region menu */
 .menu {
   box-sizing: border-box;
@@ -8,6 +11,10 @@
 
   &__top {
     margin-bottom: 32px;
+
+    @include mixins.on-tablet {
+      margin-bottom: 56px;
+    }
   }
 
   &__nav {
@@ -15,7 +22,7 @@
   }
 
   &__content {
-    padding-inline: 20px;
+    @include mixins.content-padding-inline;
   }
 
   &__phone-number {
@@ -34,7 +41,7 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     padding-bottom: 4px;
-    border-bottom: 1px solid #292929;
+    border-bottom: 1px solid vars.$main-text-color;
   }
 }
 

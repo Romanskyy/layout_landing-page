@@ -1,3 +1,5 @@
+@use '../utils/mixins' as mixins;
+
 /* #region header */
 .header {
   box-sizing: border-box;
@@ -16,10 +18,21 @@
     line-height: 100%;
     font-weight: 700;
     letter-spacing: 0;
+
+    @include mixins.on-tablet {
+      font-size: 48px;
+    }
   }
 
   &__bottom {
-    padding: 0 20px 40px;
+    padding-bottom: 40px;
+
+    @include mixins.on-tablet {
+      padding-bottom: 65px;
+    }
+
+    @include mixins.content-padding-inline;
+
   }
 }
 

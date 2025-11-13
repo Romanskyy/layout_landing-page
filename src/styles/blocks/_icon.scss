@@ -1,8 +1,16 @@
+@use '../utils/mixins' as mixins;
+
 /* #region icon */
 .icon {
   height: 24px;
   width: 24px;
   display: block;
+  background-size: cover;
+
+  @include mixins.on-tablet {
+    height: 32px;
+    width: 32px;
+  }
 
   &--phone {
     background-image: url(../icons/icon-phone.png);

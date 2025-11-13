@@ -1,7 +1,9 @@
+@use '../utils/variables' as vars;
+
 /* #region page */
 .page {
   font-family: 'Space Grotesk', sans-serif;
-  color: #292929;
+  color: vars.$main-text-color;
   font-size: 16px;
   line-height: 140%;
 
