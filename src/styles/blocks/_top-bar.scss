@@ -3,9 +3,6 @@
 /* #region top-bar */
 .top-bar {
   padding-block: 28px;
-
-  @include mixins.content-padding-inline;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
