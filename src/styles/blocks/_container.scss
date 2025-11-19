@@ -1,7 +1,6 @@
 @use '../utils/mixins' as mixins;
 
 .container {
-  // @include mixins.content-padding-inline;
   padding-inline: 20px;
 
   @include mixins.on-tablet {
