@@ -3,24 +3,6 @@
 .about-us {
   @include mixins.page-grid;
 
-  // &__banner {
-  //   position: relative;
-  //   width: 100vw;
-
-  //   left: 50%;
-  //   // right: 50%;
-  //   margin-left: -50vw;
-  //   // margin-right: -50vw;
-
-  //   margin-bottom: 48px;
-  // }
-
-  // &__banner-image {
-  //   width: 100%;
-  //   display: block;
-  //   object-fit: cover;
-  // }
-
   &__title {
     grid-column: 1 / -1;
 
