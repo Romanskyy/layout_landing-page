@@ -5,6 +5,7 @@
 .menu {
   box-sizing: border-box;
   height: 100vh;
+  overflow-y: auto;
   background-color: #e5e6e8;
   font-weight: 700;
   text-transform: capitalize;

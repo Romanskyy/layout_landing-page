@@ -6,7 +6,8 @@
   &__content {
     display: grid;
     row-gap: 96px;
-    padding-block: 64px;
+    padding-top: 64px;
+    padding-bottom: 96px;
 
     @include mixins.on-tablet {
       row-gap: 120px;
