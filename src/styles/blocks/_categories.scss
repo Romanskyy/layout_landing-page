@@ -1,4 +1,5 @@
 @use '../utils/mixins' as mixins;
+@use '../utils/variables' as vars;
 
 .categories {
   &__wrapper {
@@ -8,5 +9,20 @@
     @include mixins.on-tablet {
       row-gap: 56px;
     }
+  }
+
+  &__button-wrapper {
+    @include mixins.page-grid;
+  }
+
+  &__item--view--all {
+    grid-column: 1 / -1;
+    height: 58px;
+
+    @include mixins.on-desktop {
+      grid-column: 1 / 5;
+    }
+
+    @include mixins.button-states;
   }
 }
