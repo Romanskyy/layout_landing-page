@@ -9,6 +9,10 @@
     padding-top: 64px;
     padding-bottom: 96px;
 
+    &--bottom {
+      padding-top: 48px;
+    }
+
     @include mixins.on-tablet {
       row-gap: 120px;
       padding-block: 120px;

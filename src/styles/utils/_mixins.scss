@@ -38,8 +38,6 @@
 }
 
 @mixin button-states {
-  // font-family: 'Space Grotesk', sans-serif;
-  // font-weight: 700;
   font-size: 16px;
   line-height: 27px;
   letter-spacing: 0;
@@ -73,5 +71,40 @@
     background-color: #111;
     color: #fff;
     border-color: transparent;
+  }
+}
+
+@mixin form-reset {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+}
+
+@mixin form-field {
+  border-radius: 8px;
+  background-color: #f8f8fa;
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  line-height: 140%;
+  color: vars.$main-text-color;
+  border: 1px solid transparent;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+
+  &::placeholder {
+    color: #7e7e83;
+  }
+
+  &:hover {
+    border-color: #d5d7de;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #141414;
+    background-color: #fff;
   }
 }

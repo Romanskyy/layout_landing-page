@@ -7,7 +7,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>NOTHING</title>
+    <title>NOTHING — Official Landing Page</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="src/images/nothing-logo.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
       rel="preconnect"
@@ -31,6 +34,7 @@
 
   <!-- #region BODY -->
   <body class="page__body">
+    <div id="top"></div>
 
     <!-- #region header -->
     <header class="header">
@@ -253,6 +257,7 @@
                   View all
                 </a>
               </div>
+
             </div>
 
           </section>
@@ -272,7 +277,7 @@
       <!-- #endregion promo banner -->
 
       <div class="container">
-        <div class="main__content">
+        <div class="main__content main__content--bottom">
 
           <!-- #region about us -->
           <section class="about-us" id="about-us">
@@ -307,6 +312,76 @@
           <!-- #region contacts -->
           <section class="contacts" id="contacts">
             <h2 class="section-title">Contact us</h2>
+
+            <div class="contacts__wrapper">
+
+              <form
+                class="contacts__form"
+                onsubmit="this.reset(); return false;"
+              >
+
+                <label for="name" class="visually-hidden"></label>
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  class="contacts__input"
+                  placeholder="Name: John Doe"
+                  required
+                >
+
+                <label for="email" class="visually-hidden"></label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  class="contacts__input"
+                  placeholder="Email: johndoe@gmail.com"
+                  required
+                >
+
+                <label for="message" class="visually-hidden"></label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="contacts__textarea"
+                  placeholder="Message: Hi! I have a question about…"
+                  required
+                ></textarea>
+
+                <button
+                  class="contacts__form-button"
+                  type="submit"
+                >
+                  Send
+                </button>
+
+              </form>
+
+              <div class="contacts__info">
+
+                <div class="contacts__info-item">
+                  <span class="contacts__info-label">Phone</span>
+                  <p class="contacts__info-value">+1 234 5555-55-55</p>
+                </div>
+
+                <div class="contacts__info-item">
+                  <span class="contacts__info-label">Email</span>
+                  <p class="contacts__info-value">hello@nothing.com</p>
+                </div>
+
+                <div class="contacts__info-item">
+                  <span class="contacts__info-label">Address</span>
+                  <p class="contacts__info-value">
+                    400 first ave.<br>
+                    suite 700<br>
+                    Minneapolis, MN 55401
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
           </section>
           <!-- #endregion contacts -->
 
