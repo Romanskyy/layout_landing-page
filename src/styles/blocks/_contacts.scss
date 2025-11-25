@@ -1,3 +1,4 @@
+@use '../utils/variables' as vars;
 @use '../utils/mixins' as mixins;
 
 .contacts {
@@ -18,9 +19,9 @@
       @include mixins.form-reset;
       @include mixins.button-states;
 
-      height: 56px;
+      height: vars.$space-xxl; // 56px
       padding-inline: 48px;
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: vars.$font-primary; // 'Space Grotesk', sans-serif
       font-weight: 700;
       margin-top: 8px;
     }
@@ -35,27 +36,30 @@
 
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: vars.$space-lg; // 24px
 
     &-label {
       display: block;
-      font-family: 'Space Grotesk', monospace;
+      font-family: vars.$font-primary; // 'Space Grotesk', sans-serif
       font-weight: 400;
       font-size: 14px;
-      line-height: 140%;
+      line-height: vars.$line-height-plus; // 140%
       letter-spacing: 0;
       color: #9393a3;
-      margin-bottom: 8px;
+      margin-bottom: vars.$space-sm; // 8px
     }
 
     &-value {
       margin: 0;
-      font-family: 'Space Mono', monospace;
+      font-family: vars.$font-secondary; // 'Space Mono', monospace
       font-weight: 400;
-      font-size: 16px;
-      line-height: 140%;
+      font-size: vars.$font-size-base; // 16px
+      line-height: vars.$line-height-plus; // 140%
       letter-spacing: 0;
       color: #191919;
+      text-decoration: none;
+
+      @include mixins.hover(color, #7e7e83);
     }
   }
 
@@ -63,20 +67,20 @@
     @include mixins.form-reset;
     @include mixins.form-field;
 
-    border-radius: 8px;
+    border-radius: vars.$radius-md; // 8px
     height: 48px;
-    padding-inline: 16px;
-    margin-bottom: 16px;
-    font-size: 16px;
+    padding-inline: vars.$space-md; // 16px
+    margin-bottom: vars.$space-md; // 16px
+    font-size: vars.$font-size-base; // 16px
   }
 
   &__textarea {
     @include mixins.form-reset;
     @include mixins.form-field;
 
-    border-radius: 8px;
+    border-radius: vars.$radius-md; // 8px
     min-height: 148px;
-    padding: 16px;
+    padding: vars.$space-md; // 16px
     resize: none;
     margin-bottom: 32px;
   }

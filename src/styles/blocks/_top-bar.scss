@@ -1,3 +1,4 @@
+@use '../utils/variables' as vars;
 @use '../utils/mixins' as mixins;
 
 /* #region top-bar */
@@ -13,7 +14,7 @@
 
   &__icons {
     display: flex;
-    gap: 24px;
+    gap: vars.$space-lg; // 24px
   }
 
   &__logo-link {
@@ -22,13 +23,13 @@
 
   &__logo {
     width: 125px;
-    height: 16px;
+    height: vars.$space-md; // 16px
 
     @include mixins.hover(transform, scale(1.2));
 
     @include mixins.on-tablet {
       width: 172px;
-      height: 24px;
+      height: vars.$space-lg; // 24px
     }
   }
 }

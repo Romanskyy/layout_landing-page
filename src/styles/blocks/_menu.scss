@@ -24,7 +24,7 @@
 
   &__phone-number {
     display: block;
-    margin-bottom: 16px;
+    margin-bottom: vars.$space-md; // 16px
     color: inherit;
     text-decoration: none;
     letter-spacing: 2px;

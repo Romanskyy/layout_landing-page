@@ -2,10 +2,10 @@
 
 /* #region page */
 .page {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: vars.$font-primary; // 'Space Grotesk', sans-serif
   color: vars.$main-text-color;
-  font-size: 16px;
-  line-height: 140%;
+  font-size: vars.$font-size-base; // 16px
+  line-height: vars.$line-height-plus; // 140%
 
   scroll-behavior: smooth;
 
@@ -14,9 +14,9 @@
     min-width: 320px;
 
     // stylelint-disable-next-line selector-max-id
-    &:has(#menu:target) {
-      overflow: hidden;
-    }
+    // &:has(#menu:target) {
+    //   overflow: hidden;
+    // }
   }
 
   &__menu {
@@ -26,7 +26,7 @@
     left: 0;
     z-index: 100;
 
-    transition: all 0.3s;
+    transition: all vars.$effect-duration; // 0.3s
     opacity: 0;
     transform: translateX(-100%);
     pointer-events: none;
@@ -36,6 +36,10 @@
       transform: translateX(0);
       pointer-events: all;
     }
+  }
+
+  &:has(.page__menu:target) {
+    overflow: hidden;
   }
 }
 

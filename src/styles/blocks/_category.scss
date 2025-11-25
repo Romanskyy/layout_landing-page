@@ -1,14 +1,27 @@
+@use '../utils/variables' as vars;
 @use '../utils/mixins' as mixins;
 
 .category {
   &__photos {
     @include mixins.page-grid;
 
-    margin-bottom: 16px;
+    margin-bottom: vars.$space-md; // 16px
+  }
+
+  &__photo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform vars.$effect-duration ease;
   }
 
   &__link {
     position: relative;
+    &:hover .category__photo {
+      transform: scale(1.05);
+    }
+
     &--wide {
       @include mixins.on-tablet {
         grid-column: span 4;
@@ -33,23 +46,15 @@
     }
   }
 
-  &__photo {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
   &__title {
     margin: 0;
     font-weight: 700;
     font-size: 18px;
-    line-height: 140%;
+    line-height: vars.$line-height-plus; // 140%
     letter-spacing: 0;
 
     @include mixins.on-tablet {
-      font-size: 24px;
-      line-height: 140%;
+      font-size: vars.$font-size-lg; // 24px
     }
   }
 }

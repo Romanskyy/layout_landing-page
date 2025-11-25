@@ -1,13 +1,13 @@
-@use '../utils/mixins' as mixins;
 @use '../utils/variables' as vars;
+@use '../utils/mixins' as mixins;
 
 .categories {
   &__wrapper {
     display: grid;
-    row-gap: 40px;
+    row-gap: vars.$space-xl; // 40px
 
     @include mixins.on-tablet {
-      row-gap: 56px;
+      row-gap: vars.$space-xxl; // 56px
     }
   }
 
