@@ -1,7 +1,8 @@
+@use '../utils/variables' as vars;
 @use '../utils/mixins' as mixins;
 
 .main {
-  background-color: #fff;
+  background-color: vars.$color-white; // #fff
 
   &__content {
     display: grid;
